@@ -4,24 +4,32 @@
 
 R package for interactive topic model visualization.
 
+![LDAvis icon](http://www2.research.att.com/~kshirley/figures/ldavis-pic.png)
+
 **LDAvis** is designed to help users interpret the topics in a topic model that has been fit to a corpus of text data. The package extracts information from a fitted LDA topic model to inform an interactive web-based visualization.
 
 ### Installing the package
 
-If you are familiar with [devtools](http://cran.r-project.org/web/packages/devtools/index.html), it is easiest to install **LDAvis** this way:
+* Stable version on CRAN:
 
-`devtools::install_github("cpsievert/LDAvis", build_vignettes = TRUE)`
+```s
+install.packages("LDAvis")
+```
 
-Alternatively, you can decompress the zip ball or tar ball and run `R CMD INSTALL` on it.
+* Development version on GitHub (with [devtools](http://cran.r-project.org/web/packages/devtools/index.html)):
+
+```s
+devtools::install_github("cpsievert/LDAvis")
+```
 
 ### Getting started
 
 Once installed, we recommend a visit to the main help page:
 
-```
+```s
 library(LDAvis)
 help(createJSON, package = "LDAvis")
-``` 
+```
 
 The documentation and example on the bottom of that page should provide a quick sense of how to create (and share) your own visualizations. If you want more details about the technical specifications of the visualization, see the vignette:
 
@@ -44,6 +52,13 @@ To share a visualization that you created using **LDAvis**, you can encode the s
 to the end of the URL, where "k", "l", and "s" are strings indicating the desired values of the selected topic, the value of lambda, and the selected term, respectively. For more details, see the last section of our [Movie Reviews example](http://cpsievert.github.io/LDAvis/reviews/reviews.html), or for a quick example, see the link here:
 
 [http://cpsievert.github.io/LDAvis/reviews/vis/#topic=3&lambda=0.6&term=cop](http://cpsievert.github.io/LDAvis/reviews/vis/#topic=3&lambda=0.6&term=cop)
+
+### Video demos
+
+* [Visualizing & Exploring the Twenty Newsgroup Data](http://stat-graphics.org/movies/ldavis.html)
+* [Visualizing Topic Models demo with Hacker News Corpus](https://www.youtube.com/watch?v=tGxW2BzC_DU)
+  * [Notebook w/Visualization](http://nbviewer.ipython.org/github/bmabey/hacker_news_topic_modelling/blob/master/HN%20Topic%20Model%20Talk.ipynb)
+  * [Slide deck](https://speakerdeck.com/bmabey/visualizing-topic-models)
 
 ### More documentation
 
